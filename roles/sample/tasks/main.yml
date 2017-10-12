@@ -1,0 +1,7 @@
+---
+- name: Fail if product version is lt 2
+  fail: msg="We need bug fixes in Prodcut 2. Please update your kit."
+  when: product_version < 2
+
+- name: Debug success
+  debug: msg="End of the product pipe {{product_version}}"
